@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 ToDo Project - Full Stack App
 
-## Getting Started
+Aplicação Full Stack de gerenciamento de tarefas (To-Do List), com autenticação JWT, interface moderna com React + Tailwind, back-end em Node (Bun), testes automatizados e conteinerização com Docker.
 
-First, run the development server:
+> Desenvolvido por [Bárbara Oliveira](https://github.com/babigoliveira)
+
+
+## 🚀 Funcionalidades
+
+- ✅ Autenticação via JWT (em breve)
+- ✅ CRUD de tarefas (criar, listar, editar e excluir)
+- ✅ Estilizado com Tailwind CSS
+- ✅ Testes automatizados no front-end e back-end
+- ✅ Containerização com Docker e orquestração via docker-compose
+- ✅ Projeto dividido por submódulos (`frontend`, `backend`)
+
+---
+
+## 🧱 Tecnologias utilizadas
+
+### Front-End (Next.js)
+
+- React + Next.js + TypeScript
+- Tailwind CSS
+- Context API
+- Jest + React Testing Library
+
+### Back-End (Bun/Node)
+
+- Bun + TypeScript
+- Express 
+- JWT para autenticação
+- Testes com Bun Test
+
+### Outros
+
+- Docker + Docker Compose
+- Git + GitHub + Submódulos
+
+---
+
+## 🧪 Como rodar o projeto localmente
+
+### Pré-requisitos
+
+- Git
+- Docker e Docker Compose
+
+### Passos
+
+1. **Clone o repositório principal com submódulos**:
 
 ```bash
+git clone --recurse-submodules https://github.com/babigoliveira/todo-project.git
+cd todo-project
+```
+2. **Instale as dependências dos submódulos:**
+
+- No backend:
+```bash
+cd todo-backend
+bun install
+```
+- No frontend:
+
+```bash
+cd todo-frontend
+npm install
+```
+3. **Executar localmente sem Docker (opcional):**
+
+- Rodar backend:
+
+```bash
+cd backend
+bun run index.ts
+```
+- Rodar frontend:
+```bash
+cd frontend
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Executar com Docker e Docker Compose (recomendado):**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Na raiz do projeto, rode:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+docker-compose up --build
+```
 
-## Learn More
+*Isso irá construir e iniciar os containers do backend e frontend.*
 
-To learn more about Next.js, take a look at the following resources:
+5. **Acessar a aplicação:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Frontend estará disponível em:
+http://localhost:3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Backend estará disponível em:
+http://localhost:33333 
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
