@@ -7,7 +7,7 @@ Aplicação Full Stack de gerenciamento de tarefas (To-Do List), com autenticaç
 
 ## 🚀 Funcionalidades
 
-- ✅ Autenticação via JWT (em breve)
+- ✅ Autenticação via JWT
 - ✅ CRUD de tarefas (criar, listar, editar e excluir)
 - ✅ Estilizado com Tailwind CSS
 - ✅ Testes automatizados no front-end e back-end
