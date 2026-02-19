@@ -19,7 +19,7 @@ services:
     container_name: todo-backend
     ports:
       - "33333:33333"
-    command: bun run index.ts
+    command: bun run server.ts
     depends_on:
       - db
     environment:

@@ -73,7 +73,7 @@ npm install
 
 ```bash
 cd backend
-bun run index.ts
+bun run server.ts
 ```
 - Rodar frontend:
 ```bash
